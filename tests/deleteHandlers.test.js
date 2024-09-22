@@ -1,4 +1,4 @@
-// eslint-disable-next-line no-undef
+
 const config = require('../config');
 
 test('should return a status code of 200', async () => {

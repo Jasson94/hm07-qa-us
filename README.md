@@ -33,4 +33,4 @@ This project is designed to test the Urban Grocers API using JavaScript and Jest
 # Author:
 Jasson Coste
 **GitHub**: Jasson94/Jasson94
-**Email**: jassoncoste@gmail.com
+**Email**: jassoncoste@gmail.com 

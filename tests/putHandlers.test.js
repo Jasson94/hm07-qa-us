@@ -1,4 +1,4 @@
-// eslint-disable-next-line no-undef
+
 const config = require('../config');
 
 const requestBody = {
