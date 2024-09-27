@@ -23,8 +23,11 @@ const requestBody = {
 			}
 		]
 }
-
-test('should return status code of 200', async () => {
+/*
+PUT test 1 check that a 200 status code is return when changing a kit
+*/
+test('should return status of 200 when changing a kit', async () => {
+	let statusCode;
     try {
 		const response = await fetch(`${config.API_URL}/api/v1/kits/7`, {
 			method: 'PUT',
@@ -33,16 +36,16 @@ test('should return status code of 200', async () => {
 			},
 			body: JSON.stringify(requestBody)
 		});
-		expect(response.status).toBe(200);
 		const data = await response.json();
-		console.log(data);
+		statusCode = data;
 	} catch (error) {
 		console.error(error);
 	}
+	expect(statusCode).toBe(200);
 });
 
-
 test('should return the expected data in the response body', async () => {
+	let changingKit;
     try {
 		const response = await fetch(`${config.API_URL}/api/v1/kits/7`, {
 			method: 'PUT',
@@ -51,13 +54,12 @@ test('should return the expected data in the response body', async () => {
 			},
 			body: JSON.stringify(requestBody)
 		});
-        
-		const data = await response.json();
-		console.log(data);
-		expect(response.status).toBe(200);
-	    expect(data).toHaveProperty('name', 'productsList');
-		expect(data).toHaveProperty('id', 'quantity');
+        const data = await response.json();
+// assigning the data to the changint kit variable
+		changingKit = data;
 	} catch (error) {
 		console.error(error);
 	}
+	// expecting the data to to have a property
+	expect(changingKit).toHaveProperty('name', 'My modify kit');
 });

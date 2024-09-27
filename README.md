@@ -15,7 +15,7 @@ This project is designed to test the Urban Grocers API using JavaScript and Jest
 
 ## Project Structure
 - `/tests`: This folder contains the test cases for the API.
-- `package.json`: Lists dependencies and scripts to run the tests.
+- `package.json`: Lists dependencies and scripts to run the tests, to install (npm install jest) in your project folder
 - `README.md`: Project documentation.
 
 ## Running the Tests
@@ -29,7 +29,8 @@ This project is designed to test the Urban Grocers API using JavaScript and Jest
    ```bash
    git clone git@github.com:Jasson94/hm07-qa-us.git
    cd hm07-qa-us.git
-
+2. **run the test with the command line** 
+"npx jest" follow by the file in which you're testning the code
 # Author:
 Jasson Coste
 **GitHub**: Jasson94/Jasson94
